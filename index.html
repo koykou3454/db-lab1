@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="local.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <div class="d-flex align-items-center" style="height: 100%; opacity: 0.95">
+            <div id = 'form' class = "container card text-white bg-dark mb-3" style="padding: 30px; max-width: 20rem; padding-bottom: 20px">
+                <form action = "insert.py" method = "POST">
+                    <h1 style = "text-align: center">User Registration</h1>
+                    <p>
+                        <input type = "text" id = "name" name = "name" class = "form-control" placeholder = "Name">
+                    </p>
+                    <p>
+                        <input type = "text" id = "email" name = "email" class = "form-control" placeholder = "Email">
+                    </p>
+                    <p>
+                        <input type = "password" id = "password" name = "password" class = "form-control" placeholder = "Password">
+                    <p>
+                        <input type = "submit" id = "btn" value = "Register" class = "btn btn-primary container">
+                    </p>
+                </form>
+            </div>
+        </div>
+
+    </body>
+</html>
+
