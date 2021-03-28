@@ -24,10 +24,12 @@ for row in range(len(result)):
         # if column == 0:
         #     print('<td><a href = "index.php">%s</a></td>' % result[row][column])
         print('<td>%s</td>' % result[row][column])
-    print('<td><a class = "edit-row" href  = "edit-row.py" onclick = passID(%d) >Edit</a><td>' % (int(result[row][0])))
+    # print('<td><a class = "edit-row" href  = "edit-row.py" onclick = passID(%d) >Edit</a><td>' % (int(result[row][0])))
+    print('<td><input type = "submit" id = "edit" name = "passID" value = %d class = "edit-row"></td>' % (int(result[row][0])))
     print("</tr>")
 print("</table>")
+print('</form>')
 print('<div id = "filler" class = "pass-ID"></div>')
-
+print('<script src = "edit.js"></script>')
 
 print('<div id = "center-button"><a href = "index.py"><button type = "button" class="btn btn-dark container" style = "max-width:80%">Add User</button></a></div>')

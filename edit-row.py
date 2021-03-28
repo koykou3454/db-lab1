@@ -2,14 +2,15 @@
 print("Content-Type: text/html")
 print()
 import cgi
-import html
 from strap import connection
-from bs4 import BeautifulSoup
 
 
-print("Hello World")
-soup = BeautifulSoup("127.0.0.1:80/lab1/home.py","html.parser")
-for tag in soup.find_all(class_= 'pass-ID'):
-    editID = (tag.get('id'))
-sdas
-print(editID)
+form = cgi.FieldStorage()
+ID = form.getvalue("passID")
+print(form.getvalue("passID"))
+
+cursor = connection.cursor()
+cursor.execute("select * from user where id = %s;" % ID)
+result = cursor.fetchall()
+
+print(result)    
